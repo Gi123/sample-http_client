@@ -15,6 +15,7 @@ add_executable(HttpClient
 
 find_package(Boost REQUIRED)
 find_package(OpenSSL REQUIRED)
+find_package(nlohmann_json REQUIRED)
 
 target_include_directories(HttpClient PRIVATE ${Boost_INCLUDE_DIRS} ${OPENSSL_INCLUDE_DIRS})
-target_link_libraries(HttpClient PRIVATE Boost::boost OpenSSL::SSL OpenSSL::Crypto)
+target_link_libraries(HttpClient PRIVATE Boost::boost OpenSSL::SSL OpenSSL::Crypto nlohmann_json::nlohmann_json)
